@@ -6,28 +6,28 @@ import Link from 'next/link'
 
 const footerLinks = {
   research: [
-    { name: 'Clinical Decision Support', href: '#research' },
-    { name: 'Predictive Healthcare', href: '#research' },
-    { name: 'Patient Safety & Quality', href: '#research' },
-    { name: 'Healthcare Data Analytics', href: '#research' },
+    { name: 'Clinical Decision Support', href: '/research' },
+    { name: 'Predictive Healthcare', href: '/research' },
+    { name: 'Patient Safety & Quality', href: '/research' },
+    { name: 'Healthcare Data Analytics', href: '/research' },
   ],
   team: [
-    { name: 'Prof. Suchi Saria', href: '#team' },
-    { name: 'Current Members', href: '#team' },
-    { name: 'Alumni', href: '#team' },
-    { name: 'Join Our Team', href: '#contact' },
+    { name: 'Prof. Suchi Saria', href: '/team' },
+    { name: 'Current Members', href: '/team' },
+    { name: 'Alumni', href: '/team' },
+    { name: 'Join Our Team', href: '/contact' },
   ],
   resources: [
-    { name: 'Publications', href: '#publications' },
+    { name: 'Publications', href: '/publications' },
     { name: 'Code & Data', href: '#' },
     { name: 'Lab Blog', href: '#' },
     { name: 'News & Events', href: '#' },
   ],
   contact: [
-    { name: 'Contact Us', href: '#contact' },
-    { name: 'Directions', href: '#contact' },
-    { name: 'Collaborations', href: '#contact' },
-    { name: 'Media Inquiries', href: '#contact' },
+    { name: 'Contact Us', href: '/contact' },
+    { name: 'Directions', href: '/contact' },
+    { name: 'Collaborations', href: '/contact' },
+    { name: 'Media Inquiries', href: '/contact' },
   ],
 }
 

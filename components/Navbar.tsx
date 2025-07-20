@@ -33,7 +33,7 @@ export default function Navbar() {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200'
+          ? 'glass-effect shadow-2xl shadow-primary-500/10'
           : 'bg-transparent'
       }`}
     >
@@ -41,7 +41,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-accent-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-accent-500 rounded-lg flex items-center justify-center glow-border">
               <span className="text-white font-bold text-sm">JHU</span>
             </div>
             <span className="font-semibold text-lg gradient-text">
@@ -57,8 +57,8 @@ export default function Navbar() {
                 href={item.href}
                 className={`transition-colors duration-200 font-medium ${
                   pathname === item.href
-                    ? 'text-primary-600'
-                    : 'text-gray-700 hover:text-primary-600'
+                    ? 'text-primary-400 glow-text'
+                    : 'text-gray-300 hover:text-primary-400'
                 }`}
               >
                 {item.name}
@@ -69,7 +69,7 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-md text-gray-700 hover:text-primary-600 transition-colors"
+            className="lg:hidden p-2 rounded-md text-gray-300 hover:text-primary-400 transition-colors"
           >
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
@@ -86,7 +86,7 @@ export default function Navbar() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-white border-t border-gray-200"
+              className="lg:hidden glass-effect border-t border-gray-800"
             >
               <div className="px-4 py-6 space-y-4">
                 {navigation.map((item) => (
@@ -96,8 +96,8 @@ export default function Navbar() {
                     onClick={() => setMobileMenuOpen(false)}
                     className={`block transition-colors duration-200 font-medium py-2 ${
                       pathname === item.href
-                        ? 'text-primary-600'
-                        : 'text-gray-700 hover:text-primary-600'
+                        ? 'text-primary-400 glow-text'
+                        : 'text-gray-300 hover:text-primary-400'
                     }`}
                   >
                     {item.name}

@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Play, Users, Award, TrendingUp } from 'lucide-react'
+import { ArrowRight, Users, Award, TrendingUp } from 'lucide-react'
 import Link from 'next/link'
 
 const stats = [
@@ -15,19 +15,19 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 gradient-bg" />
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50/50 via-transparent to-accent-50/50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/20 via-transparent to-accent-900/20" />
       
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-primary-200/30 to-accent-200/30 rounded-full blur-3xl"
+          className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-primary-500/20 to-accent-500/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{ rotate: -360 }}
           transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-accent-200/30 to-primary-200/30 rounded-full blur-3xl"
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-accent-500/20 to-primary-500/20 rounded-full blur-3xl"
         />
       </div>
 
@@ -45,9 +45,9 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium"
+                className="inline-flex items-center px-4 py-2 rounded-full bg-primary-900/50 text-primary-300 text-sm font-medium glass-effect"
               >
-                <span className="w-2 h-2 bg-primary-500 rounded-full mr-2" />
+                <span className="w-2 h-2 bg-primary-400 rounded-full mr-2" />
                 Johns Hopkins University
               </motion.div>
               
@@ -55,17 +55,17 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-100 leading-tight text-shadow"
               >
                 Advancing Healthcare Through{' '}
-                <span className="gradient-text">AI & Machine Learning</span>
+                <span className="gradient-text glow-text">AI & Machine Learning</span>
               </motion.h1>
               
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-xl text-gray-600 leading-relaxed max-w-2xl"
+                className="text-xl text-gray-300 leading-relaxed max-w-2xl"
               >
                 Led by Professor Suchi Saria, our lab pioneers innovative research at the intersection of artificial intelligence, machine learning, and healthcare to improve patient outcomes and transform medical practice.
               </motion.p>
@@ -80,7 +80,7 @@ export default function Hero() {
             >
               <Link
                 href="/research"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
+                className="dark-button inline-flex items-center justify-center px-8 py-4"
               >
                 Explore Our Research
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -88,7 +88,7 @@ export default function Hero() {
               
               <Link
                 href="/team"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-primary-600 hover:text-primary-600 transition-all duration-300"
+                className="dark-button-secondary inline-flex items-center justify-center px-8 py-4"
               >
                 Meet Our Team
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -110,11 +110,11 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 + index * 0.1 }}
-                  className="bg-white/80 backdrop-blur-sm rounded-xl p-6 text-center shadow-lg border border-white/20"
+                  className="dark-card p-6 text-center card-hover"
                 >
-                  <stat.icon className="h-8 w-8 text-primary-600 mx-auto mb-3" />
-                  <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
-                  <div className="text-sm text-gray-600">{stat.label}</div>
+                  <stat.icon className="h-8 w-8 text-primary-400 mx-auto mb-3" />
+                  <div className="text-2xl font-bold text-gray-100">{stat.value}</div>
+                  <div className="text-sm text-gray-400">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -123,16 +123,16 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9 }}
-              className="bg-white/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-white/20"
+              className="dark-card p-6"
             >
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Latest Research</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <h3 className="text-lg font-semibold text-gray-100 mb-3">Latest Research</h3>
+              <p className="text-gray-300 text-sm leading-relaxed">
                 "Machine Learning for Early Detection of Sepsis in Critical Care Settings" - 
                 Published in Nature Medicine, 2024
               </p>
               <Link
                 href="/publications"
-                className="inline-flex items-center text-primary-600 hover:text-primary-700 text-sm font-medium mt-3"
+                className="inline-flex items-center text-primary-400 hover:text-primary-300 text-sm font-medium mt-3 transition-colors"
               >
                 Read More
                 <ArrowRight className="ml-1 h-4 w-4" />
@@ -152,7 +152,7 @@ export default function Hero() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center"
+          className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center"
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
