@@ -5,6 +5,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('http://localhost:3000'),
   title: 'JHU AIML Healthcare Lab - Machine Learning, AI, and Healthcare Research',
   description: 'The Machine Learning, AI, and Healthcare Lab at Johns Hopkins University, led by Professor Suchi Saria. Advancing healthcare through innovative AI and machine learning research.',
   keywords: 'machine learning, artificial intelligence, healthcare, JHU, Johns Hopkins, Suchi Saria, research lab',

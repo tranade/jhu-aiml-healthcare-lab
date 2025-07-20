@@ -1,9 +1,6 @@
 import { Metadata } from 'next'
 import Hero from '@/components/Hero'
-import ResearchAreas from '@/components/ResearchAreas'
-import Team from '@/components/Team'
-import Publications from '@/components/Publications'
-import Contact from '@/components/Contact'
+import QuickLinks from '@/components/QuickLinks'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
@@ -17,10 +14,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navbar />
       <Hero />
-      <ResearchAreas />
-      <Team />
-      <Publications />
-      <Contact />
+      <QuickLinks />
       <Footer />
     </main>
   )

@@ -12,7 +12,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 gradient-bg" />
       <div className="absolute inset-0 bg-gradient-to-br from-primary-50/50 via-transparent to-accent-50/50" />
@@ -79,17 +79,20 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link
-                href="#research"
+                href="/research"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
                 Explore Our Research
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               
-              <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-primary-600 hover:text-primary-600 transition-all duration-300">
-                <Play className="mr-2 h-5 w-5" />
-                Watch Lab Overview
-              </button>
+              <Link
+                href="/team"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-primary-600 hover:text-primary-600 transition-all duration-300"
+              >
+                Meet Our Team
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </motion.div>
           </motion.div>
 
@@ -128,7 +131,7 @@ export default function Hero() {
                 Published in Nature Medicine, 2024
               </p>
               <Link
-                href="#publications"
+                href="/publications"
                 className="inline-flex items-center text-primary-600 hover:text-primary-700 text-sm font-medium mt-3"
               >
                 Read More

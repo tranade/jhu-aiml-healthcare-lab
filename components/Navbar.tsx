@@ -2,20 +2,22 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const navigation = [
-  { name: 'Home', href: '#home' },
-  { name: 'Research', href: '#research' },
-  { name: 'Team', href: '#team' },
-  { name: 'Publications', href: '#publications' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Home', href: '/' },
+  { name: 'Research', href: '/research' },
+  { name: 'Team', href: '/team' },
+  { name: 'Publications', href: '/publications' },
+  { name: 'Contact', href: '/contact' },
 ]
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,7 +40,7 @@ export default function Navbar() {
       <div className="container-max">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="#home" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-accent-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">JHU</span>
             </div>
@@ -53,7 +55,11 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-primary-600 transition-colors duration-200 font-medium"
+                className={`transition-colors duration-200 font-medium ${
+                  pathname === item.href
+                    ? 'text-primary-600'
+                    : 'text-gray-700 hover:text-primary-600'
+                }`}
               >
                 {item.name}
               </Link>
@@ -88,7 +94,11 @@ export default function Navbar() {
                     key={item.name}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-gray-700 hover:text-primary-600 transition-colors duration-200 font-medium py-2"
+                    className={`block transition-colors duration-200 font-medium py-2 ${
+                      pathname === item.href
+                        ? 'text-primary-600'
+                        : 'text-gray-700 hover:text-primary-600'
+                    }`}
                   >
                     {item.name}
                   </Link>
