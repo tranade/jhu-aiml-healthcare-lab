@@ -41,7 +41,7 @@ const quickLinks = [
 
 export default function QuickLinks() {
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-gray-950">
       <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -50,10 +50,10 @@ export default function QuickLinks() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-100 mb-6">
             Explore Our Lab
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover our research areas, meet our team, browse publications, and get in touch with us.
           </p>
         </motion.div>

@@ -50,23 +50,8 @@ const researchAreas = [
 
 export default function ResearchAreas() {
   return (
-    <section className="section-padding bg-gray-950">
+    <section className="section-padding bg-gray-900">
       <div className="container-max">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-100 mb-6">
-            Our Research Areas
-          </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            We focus on cutting-edge research at the intersection of artificial intelligence, machine learning, and healthcare to address the most pressing challenges in modern medicine.
-          </p>
-        </motion.div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {researchAreas.map((area, index) => (
             <motion.div

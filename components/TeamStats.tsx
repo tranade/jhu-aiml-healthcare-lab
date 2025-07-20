@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Award, Users, TrendingUp, Globe, Calendar, MapPin } from 'lucide-react'
+import { Award, Users, TrendingUp, BookOpen, Globe, Star } from 'lucide-react'
 
 const stats = [
   {
@@ -11,10 +11,10 @@ const stats = [
     description: 'Interdisciplinary researchers, engineers, and healthcare professionals',
   },
   {
-    icon: Award,
+    icon: BookOpen,
     value: '100+',
     label: 'Publications',
-    description: 'Peer-reviewed papers in top-tier venues including Nature Medicine, JAMA, ICML',
+    description: 'Peer-reviewed papers in top-tier venues including Nature Medicine, JAMA, Science',
   },
   {
     icon: TrendingUp,
@@ -23,40 +23,49 @@ const stats = [
     description: 'Active projects spanning clinical decision support to population health',
   },
   {
-    icon: Globe,
+    icon: Award,
     value: '15+',
-    label: 'Collaborations',
-    description: 'Partnerships with hospitals, research institutions, and industry',
+    label: 'Awards & Grants',
+    description: 'NSF CAREER, Sloan Fellowship, NIH Director\'s New Innovator Award',
   },
 ]
 
-const highlights = [
+const awards = [
   {
     title: 'NSF CAREER Award',
-    description: 'Recognizing early-career excellence in research and education',
+    recipient: 'Prof. Suchi Saria',
     year: '2023',
+    description: 'National Science Foundation\'s most prestigious award for early-career faculty',
+    icon: Star,
   },
   {
     title: 'Sloan Research Fellowship',
-    description: 'Prestigious fellowship for outstanding early-career scientists',
+    recipient: 'Prof. Suchi Saria',
     year: '2022',
+    description: 'Alfred P. Sloan Foundation fellowship recognizing outstanding early-career scientists',
+    icon: Star,
   },
   {
     title: 'MIT TR35',
-    description: 'Innovator under 35 making significant contributions to technology',
+    recipient: 'Prof. Suchi Saria',
     year: '2021',
+    description: 'MIT Technology Review\'s 35 Innovators Under 35',
+    icon: Star,
   },
   {
     title: 'NIH Director\'s New Innovator Award',
-    description: 'Supporting exceptionally creative early-career investigators',
+    recipient: 'Prof. Suchi Saria',
     year: '2020',
+    description: 'High-risk, high-reward research award from the National Institutes of Health',
+    icon: Star,
   },
 ]
 
 export default function TeamStats() {
   return (
-    <section className="section-padding bg-gray-900">
+    <section className="section-padding bg-gray-950">
       <div className="container-max">
+        {/* Lab Statistics */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -65,14 +74,14 @@ export default function TeamStats() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-100 mb-6">
-            Lab Statistics & Achievements
+            Lab Statistics & Impact
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Our lab has grown significantly over the years, with numerous publications, awards, and impactful research contributions to the field of healthcare AI.
+            Our research has made significant contributions to the field of AI in healthcare, with measurable impact across multiple domains.
           </p>
         </motion.div>
 
-        {/* Statistics Grid */}
+        {/* Stats Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
             <motion.div
@@ -83,103 +92,92 @@ export default function TeamStats() {
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
             >
-              <div className="dark-card p-6 text-center card-hover h-full">
+              <div className="dark-card p-8 text-center card-hover">
                 <stat.icon className="h-12 w-12 text-primary-400 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-gray-100 mb-2">{stat.value}</div>
-                <div className="text-lg font-semibold text-gray-100 mb-3">{stat.label}</div>
-                <p className="text-sm text-gray-300">{stat.description}</p>
+                <div className="text-lg font-semibold text-gray-200 mb-3">{stat.label}</div>
+                <p className="text-sm text-gray-400 leading-relaxed">{stat.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Awards & Recognition */}
+        {/* Awards Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <h3 className="text-2xl font-bold text-gray-100 mb-8 text-center">
-            Awards & Recognition
-          </h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {highlights.map((highlight, index) => (
-              <motion.div
-                key={highlight.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="dark-card p-6 card-hover">
-                  <div className="flex items-start justify-between mb-4">
-                    <h4 className="text-lg font-bold text-gray-100">{highlight.title}</h4>
-                    <span className="px-3 py-1 bg-primary-900/50 text-primary-300 text-sm rounded-full border border-primary-500/30">
-                      {highlight.year}
-                    </span>
-                  </div>
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    {highlight.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Lab Information */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
         >
           <div className="bg-gradient-to-r from-primary-600 to-accent-600 rounded-3xl p-8 lg:p-12 text-white glow-border">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl lg:text-3xl font-bold mb-4">
-                  Join Our Team
-                </h3>
-                <p className="text-lg text-primary-100 leading-relaxed mb-6">
-                  We're always looking for talented researchers, engineers, and healthcare professionals who are passionate about advancing AI in healthcare. Join us in making a difference.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center text-primary-100">
-                    <MapPin className="h-5 w-5 mr-3" />
-                    <span>Malone Hall, Johns Hopkins University</span>
-                  </div>
-                  <div className="flex items-center text-primary-100">
-                    <Calendar className="h-5 w-5 mr-3" />
-                    <span>Open positions for Postdocs, PhD students, and Research Scientists</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
-                <h4 className="text-lg font-semibold mb-4">Current Openings</h4>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span>Postdoctoral Fellow</span>
-                    <span className="font-bold">2 positions</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>PhD Students</span>
-                    <span className="font-bold">3 positions</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Research Scientist</span>
-                    <span className="font-bold">1 position</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span>Software Engineer</span>
-                    <span className="font-bold">2 positions</span>
-                  </div>
-                </div>
-              </div>
+            <div className="text-center mb-12">
+              <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+                Awards & Recognition
+              </h3>
+              <p className="text-lg text-primary-100 max-w-3xl mx-auto">
+                Our lab has received numerous prestigious awards and recognition for our contributions to AI in healthcare.
+              </p>
             </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {awards.map((award, index) => (
+                <motion.div
+                  key={award.title}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -2 }}
+                >
+                  <div className="bg-white/10 rounded-2xl p-6 backdrop-blur-sm">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                        <award.icon className="h-6 w-6 text-primary-300" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-lg font-semibold mb-2">{award.title}</h4>
+                        <p className="text-primary-200 text-sm mb-2">{award.recipient}, {award.year}</p>
+                        <p className="text-sm text-primary-100 leading-relaxed">{award.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Call to Action */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.2 }}
+              viewport={{ once: true }}
+              className="text-center mt-12"
+            >
+              <div className="bg-white/10 rounded-2xl p-8 backdrop-blur-sm">
+                <h4 className="text-xl font-semibold mb-4">
+                  Join Our Team
+                </h4>
+                <p className="text-primary-100 mb-6 max-w-2xl mx-auto">
+                  We're always looking for talented researchers, engineers, and healthcare professionals to join our mission of advancing AI in healthcare.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center px-6 py-3 bg-white text-primary-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+                  >
+                    Contact Us
+                    <Globe className="ml-2 h-5 w-5" />
+                  </a>
+                  <a
+                    href="#"
+                    className="inline-flex items-center px-6 py-3 border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
+                  >
+                    View Openings
+                    <Users className="ml-2 h-5 w-5" />
+                  </a>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>

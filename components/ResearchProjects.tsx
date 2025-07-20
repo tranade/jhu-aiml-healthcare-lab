@@ -1,54 +1,86 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ExternalLink, Calendar, Users, Award } from 'lucide-react'
+import { ExternalLink, Calendar, Users, TrendingUp } from 'lucide-react'
 
 const projects = [
   {
     title: 'Early Sepsis Detection System',
-    description: 'Machine learning system for real-time detection of sepsis in ICU patients using continuous monitoring data.',
+    description: 'Real-time machine learning system for early detection of sepsis in critical care settings using continuous monitoring data.',
     status: 'Active',
-    team: 'Dr. Saria, Dr. Johnson, Dr. Chen',
+    statusColor: 'bg-green-500',
+    team: 'Dr. Sarah Johnson, Dr. Michael Chen',
+    timeline: '2023 - 2025',
     funding: 'NIH R01 Grant',
-    timeline: '2023-2026',
-    impact: 'Potential to save 500+ lives annually',
-    tags: ['Clinical Trials', 'FDA Approval', 'Real-time Monitoring'],
+    impact: 'High',
+    tags: ['Clinical Decision Support', 'Critical Care', 'Real-time Monitoring'],
+    link: '#',
   },
   {
-    title: 'Predictive Healthcare Analytics',
-    description: 'AI-powered platform for predicting patient outcomes and treatment responses across multiple disease domains.',
+    title: 'Predictive Healthcare Analytics Platform',
+    description: 'Comprehensive platform for predicting patient outcomes and treatment responses across multiple disease domains.',
     status: 'Active',
-    team: 'Dr. Saria, Dr. Williams, Dr. Rodriguez',
+    statusColor: 'bg-green-500',
+    team: 'Prof. Suchi Saria, Dr. Emily Rodriguez',
+    timeline: '2022 - 2026',
     funding: 'NSF CAREER Award',
-    timeline: '2022-2027',
-    impact: 'Improving treatment decisions for 10,000+ patients',
-    tags: ['Predictive Modeling', 'Personalized Medicine', 'Clinical Decision Support'],
+    impact: 'High',
+    tags: ['Predictive Modeling', 'Personalized Medicine', 'Deep Learning'],
+    link: '#',
+  },
+  {
+    title: 'Federated Learning for Healthcare',
+    description: 'Privacy-preserving AI development through federated learning across multiple healthcare institutions.',
+    status: 'Active',
+    statusColor: 'bg-green-500',
+    team: 'Dr. Michael Chen, Dr. Sarah Johnson',
+    timeline: '2023 - 2025',
+    funding: 'NIH Director\'s New Innovator Award',
+    impact: 'Breakthrough',
+    tags: ['Federated Learning', 'Privacy', 'Collaborative AI'],
+    link: '#',
   },
   {
     title: 'Population Health Intelligence',
     description: 'Large-scale analysis of population health data for disease prevention and public health interventions.',
     status: 'Planning',
-    team: 'Dr. Saria, Dr. Thompson, Dr. Lee',
-    funding: 'CDC Partnership',
-    timeline: '2024-2028',
-    impact: 'Population-level health insights for 5M+ individuals',
-    tags: ['Population Health', 'Public Health', 'Data Analytics'],
+    statusColor: 'bg-yellow-500',
+    team: 'Dr. Emily Rodriguez, Prof. Suchi Saria',
+    timeline: '2024 - 2027',
+    funding: 'CDC Grant',
+    impact: 'Policy',
+    tags: ['Population Health', 'Public Health', 'Epidemiology'],
+    link: '#',
   },
   {
-    title: 'Patient Safety Monitoring',
+    title: 'Patient Safety Monitoring System',
     description: 'AI system for continuous monitoring of patient safety and early detection of adverse events.',
     status: 'Active',
-    team: 'Dr. Saria, Dr. Garcia, Dr. Kim',
+    statusColor: 'bg-green-500',
+    team: 'Dr. Sarah Johnson, Dr. Michael Chen',
+    timeline: '2023 - 2025',
     funding: 'AHRQ Grant',
-    timeline: '2023-2025',
-    impact: 'Reducing adverse events by 30%',
-    tags: ['Patient Safety', 'Quality Improvement', 'Real-time Alerts'],
+    impact: 'Clinical',
+    tags: ['Patient Safety', 'Real-time Monitoring', 'Quality Improvement'],
+    link: '#',
+  },
+  {
+    title: 'Interpretable AI for Clinical Decision Support',
+    description: 'Development of interpretable AI systems for clinical decision support with transparency and trust.',
+    status: 'Active',
+    statusColor: 'bg-green-500',
+    team: 'Prof. Suchi Saria, Dr. Sarah Johnson',
+    timeline: '2022 - 2025',
+    funding: 'Sloan Research Fellowship',
+    impact: 'High',
+    tags: ['Interpretable AI', 'Clinical Decision Support', 'Transparency'],
+    link: '#',
   },
 ]
 
 export default function ResearchProjects() {
   return (
-    <section className="section-padding bg-gray-900">
+    <section className="section-padding bg-gray-950">
       <div className="container-max">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -61,7 +93,7 @@ export default function ResearchProjects() {
             Current Research Projects
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Our active research projects span multiple domains of healthcare AI, from clinical decision support to population health analytics.
+            Our lab is actively working on cutting-edge research projects that push the boundaries of AI in healthcare.
           </p>
         </motion.div>
 
@@ -77,43 +109,43 @@ export default function ResearchProjects() {
             >
               <div className="dark-card p-8 h-full card-hover">
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-xl font-bold text-gray-100 mb-2">
-                    {project.title}
-                  </h3>
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    project.status === 'Active' 
-                      ? 'bg-green-900/50 text-green-300 border border-green-500/30'
-                      : 'bg-yellow-900/50 text-yellow-300 border border-yellow-500/30'
-                  }`}>
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium text-white ${project.statusColor}`}>
                     {project.status}
                   </span>
+                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    project.impact === 'High' ? 'bg-green-900/50 text-green-300 border border-green-500/30' :
+                    project.impact === 'Breakthrough' ? 'bg-purple-900/50 text-purple-300 border border-purple-500/30' :
+                    project.impact === 'Policy' ? 'bg-orange-900/50 text-orange-300 border border-orange-500/30' :
+                    'bg-blue-900/50 text-blue-300 border border-blue-500/30'
+                  }`}>
+                    {project.impact} Impact
+                  </span>
                 </div>
-                
+
+                <h3 className="text-xl font-bold text-gray-100 mb-4">
+                  {project.title}
+                </h3>
+
                 <p className="text-gray-300 leading-relaxed mb-6">
                   {project.description}
                 </p>
-                
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-center text-gray-300">
-                    <Users className="h-4 w-4 mr-3 text-primary-400" />
-                    <span className="text-sm">{project.team}</span>
+
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-gray-400 text-sm">
+                    <Users className="h-4 w-4 mr-3" />
+                    <span>{project.team}</span>
                   </div>
-                  <div className="flex items-center text-gray-300">
-                    <Award className="h-4 w-4 mr-3 text-primary-400" />
-                    <span className="text-sm">{project.funding}</span>
+                  <div className="flex items-center text-gray-400 text-sm">
+                    <Calendar className="h-4 w-4 mr-3" />
+                    <span>{project.timeline}</span>
                   </div>
-                  <div className="flex items-center text-gray-300">
-                    <Calendar className="h-4 w-4 mr-3 text-primary-400" />
-                    <span className="text-sm">{project.timeline}</span>
+                  <div className="flex items-center text-gray-400 text-sm">
+                    <TrendingUp className="h-4 w-4 mr-3" />
+                    <span>{project.funding}</span>
                   </div>
                 </div>
-                
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-100 mb-3">Expected Impact</h4>
-                  <p className="text-sm text-gray-300">{project.impact}</p>
-                </div>
-                
-                <div className="flex flex-wrap gap-2">
+
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
@@ -123,6 +155,14 @@ export default function ResearchProjects() {
                     </span>
                   ))}
                 </div>
+
+                <a
+                  href={project.link}
+                  className="inline-flex items-center text-primary-400 hover:text-primary-300 text-sm font-medium transition-colors"
+                >
+                  Learn More
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </a>
               </div>
             </motion.div>
           ))}
@@ -138,10 +178,10 @@ export default function ResearchProjects() {
         >
           <div className="bg-gradient-to-r from-primary-600 to-accent-600 rounded-2xl p-8 text-white glow-border">
             <h3 className="text-2xl font-bold mb-4">
-              Interested in Collaborating?
+              Collaborate With Us
             </h3>
             <p className="text-lg text-primary-100 mb-6 max-w-2xl mx-auto">
-              We're always looking for partners in healthcare, technology, and research. Let's work together to advance healthcare AI.
+              Interested in collaborating on research projects? We welcome partnerships with healthcare institutions, industry partners, and fellow researchers.
             </p>
             <a
               href="/contact"

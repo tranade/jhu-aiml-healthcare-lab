@@ -75,23 +75,8 @@ const stats = [
 
 export default function Team() {
   return (
-    <section className="section-padding bg-gray-950">
+    <section className="section-padding bg-gray-900">
       <div className="container-max">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-100 mb-6">
-            Meet Our Team
-          </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Our interdisciplinary team brings together expertise in machine learning, computer science, medicine, and healthcare analytics to advance the field of AI in healthcare.
-          </p>
-        </motion.div>
-
         {/* Team Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

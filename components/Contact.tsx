@@ -41,21 +41,6 @@ export default function Contact() {
   return (
     <section className="section-padding bg-gray-950">
       <div className="container-max">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-100 mb-6">
-            Get in Touch
-          </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            We welcome collaborations, research partnerships, and inquiries from researchers, healthcare providers, and industry partners interested in advancing AI in healthcare.
-          </p>
-        </motion.div>
-
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <motion.div

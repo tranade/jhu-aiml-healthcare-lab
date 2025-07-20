@@ -35,7 +35,7 @@ const socialLinks = [
   { name: 'LinkedIn', href: '#', icon: Linkedin },
   { name: 'Twitter', href: '#', icon: Twitter },
   { name: 'GitHub', href: '#', icon: Github },
-  { name: 'Email', href: 'mailto:aiml-healthcare@jhu.edu', icon: Mail },
+  { name: 'Email', href: 'mailto:AI/ML-healthcare@jhu.edu', icon: Mail },
 ]
 
 export default function Footer() {
@@ -56,7 +56,7 @@ export default function Footer() {
                 <span className="text-white font-bold text-sm">JHU</span>
               </div>
               <span className="font-semibold text-lg">
-                AIML Healthcare Lab
+                AI/ML Healthcare Lab
               </span>
             </div>
             
@@ -75,7 +75,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center text-gray-300">
                 <Mail className="h-4 w-4 mr-3 text-primary-400" />
-                <span className="text-sm">aiml-healthcare@jhu.edu</span>
+                <span className="text-sm">AI/ML-healthcare@jhu.edu</span>
               </div>
             </div>
           </motion.div>
@@ -177,7 +177,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-6">
               <span className="text-gray-400 text-sm">
-                © 2024 JHU AIML Healthcare Lab. All rights reserved.
+                © 2024 JHU AI/ML Healthcare Lab. All rights reserved.
               </span>
             </div>
             

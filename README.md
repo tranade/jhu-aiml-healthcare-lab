@@ -1,4 +1,4 @@
-# JHU AIML Healthcare Lab Website
+# JHU AI/ML Healthcare Lab Website
 
 A modern, responsive website for the Machine Learning, AI, and Healthcare Lab at Johns Hopkins University, led by Professor Suchi Saria. Built with Next.js, TypeScript, and Tailwind CSS.
 

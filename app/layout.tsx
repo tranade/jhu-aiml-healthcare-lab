@@ -6,21 +6,21 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3000'),
-  title: 'JHU AIML Healthcare Lab - Machine Learning, AI, and Healthcare Research',
+  title: 'JHU AI/ML Healthcare Lab - Machine Learning, AI, and Healthcare Research',
   description: 'The Machine Learning, AI, and Healthcare Lab at Johns Hopkins University, led by Professor Suchi Saria. Advancing healthcare through innovative AI and machine learning research.',
   keywords: 'machine learning, artificial intelligence, healthcare, JHU, Johns Hopkins, Suchi Saria, research lab',
-  authors: [{ name: 'JHU AIML Healthcare Lab' }],
+  authors: [{ name: 'JHU AI/ML Healthcare Lab' }],
   openGraph: {
-    title: 'JHU AIML Healthcare Lab',
+    title: 'JHU AI/ML Healthcare Lab',
     description: 'Advancing healthcare through innovative AI and machine learning research',
     url: 'https://aiml-healthcare.jhu.edu',
-    siteName: 'JHU AIML Healthcare Lab',
+    siteName: 'JHU AI/ML Healthcare Lab',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'JHU AIML Healthcare Lab',
+        alt: 'JHU AI/ML Healthcare Lab',
       },
     ],
     locale: 'en_US',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'JHU AIML Healthcare Lab',
+    title: 'JHU AI/ML Healthcare Lab',
     description: 'Advancing healthcare through innovative AI and machine learning research',
     images: ['/og-image.jpg'],
   },
