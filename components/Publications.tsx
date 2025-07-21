@@ -89,7 +89,7 @@ export default function Publications() {
 
   return (
     <section className="section-padding bg-gray-950">
-      <div className="container-max">
+      <div className="container-max mobile-padding">
         {/* Search and Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -133,7 +133,7 @@ export default function Publications() {
         </motion.div>
 
         {/* Publications Grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {filteredPublications.map((pub, index) => (
             <motion.div
               key={pub.doi}

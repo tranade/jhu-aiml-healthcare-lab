@@ -123,7 +123,7 @@ export default function PublicationFilters() {
 
   return (
     <section className="section-padding">
-      <div className="container-max">
+      <div className="container-max mobile-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -147,7 +147,7 @@ export default function PublicationFilters() {
           viewport={{ once: true }}
           className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 mb-12"
         >
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Search */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">

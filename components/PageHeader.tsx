@@ -13,7 +13,7 @@ interface PageHeaderProps {
 export default function PageHeader({ title, description, showBackButton = false }: PageHeaderProps) {
   return (
     <section className="bg-gradient-to-r from-primary-600 to-accent-600 text-white pt-24 pb-16 lg:pt-32 lg:pb-20">
-      <div className="container-max">
+      <div className="container-max mobile-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

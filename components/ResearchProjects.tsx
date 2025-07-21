@@ -81,7 +81,7 @@ const projects = [
 export default function ResearchProjects() {
   return (
     <section className="section-padding bg-gray-950">
-      <div className="container-max">
+      <div className="container-max mobile-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -97,7 +97,7 @@ export default function ResearchProjects() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}

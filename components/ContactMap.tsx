@@ -35,7 +35,7 @@ const nearbyAttractions = [
 export default function ContactMap() {
   return (
     <section className="section-padding bg-gray-50">
-      <div className="container-max">
+      <div className="container-max mobile-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ export default function ContactMap() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Map Placeholder */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}

@@ -64,7 +64,7 @@ const awards = [
 export default function TeamStats() {
   return (
     <section className="section-padding bg-gray-950">
-      <div className="container-max">
+      <div className="container-max mobile-padding">
         {/* Lab Statistics */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -82,7 +82,7 @@ export default function TeamStats() {
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -119,7 +119,7 @@ export default function TeamStats() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {awards.map((award, index) => (
                 <motion.div
                   key={award.title}

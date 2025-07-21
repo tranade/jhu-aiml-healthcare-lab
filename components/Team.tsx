@@ -76,7 +76,7 @@ const stats = [
 export default function Team() {
   return (
     <section className="section-padding bg-gray-900">
-      <div className="container-max">
+      <div className="container-max mobile-padding">
         {/* Team Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -112,7 +112,7 @@ export default function Team() {
               viewport={{ once: true }}
               className="dark-card p-8 lg:p-12"
             >
-              <div className="grid lg:grid-cols-3 gap-8 items-start">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
                 {/* Photo */}
                 <div className="lg:col-span-1">
                   <div className="w-full aspect-square bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mb-6">

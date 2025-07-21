@@ -51,8 +51,8 @@ const researchAreas = [
 export default function ResearchAreas() {
   return (
     <section className="section-padding bg-gray-900">
-      <div className="container-max">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="container-max mobile-padding">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {researchAreas.map((area, index) => (
             <motion.div
               key={area.title}
@@ -87,7 +87,7 @@ export default function ResearchAreas() {
           viewport={{ once: true }}
           className="mt-16 bg-gradient-to-r from-primary-600 to-accent-600 rounded-3xl p-8 lg:p-12 text-white glow-border"
         >
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl lg:text-3xl font-bold mb-4">
                 Featured Research: Early Sepsis Detection

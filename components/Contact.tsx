@@ -40,8 +40,8 @@ const socialLinks = [
 export default function Contact() {
   return (
     <section className="section-padding bg-gray-950">
-      <div className="container-max">
-        <div className="grid lg:grid-cols-2 gap-12">
+      <div className="container-max mobile-padding">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -55,7 +55,7 @@ export default function Contact() {
               </h2>
               
               <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
                       First Name

@@ -12,7 +12,7 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 lg:pt-0">
       {/* Background */}
       <div className="absolute inset-0 gradient-bg" />
       <div className="absolute inset-0 bg-gradient-to-br from-primary-900/20 via-transparent to-accent-900/20" />
@@ -31,7 +31,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 container-max section-padding">
+      <div className="relative z-10 container-max section-padding mobile-padding px-10 sm:px-12 lg:px-12 pb-16 sm:pb-20 lg:pb-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <motion.div
@@ -142,12 +142,12 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator - Hidden on mobile */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:block"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}

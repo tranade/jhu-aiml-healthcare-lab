@@ -42,7 +42,7 @@ const quickLinks = [
 export default function QuickLinks() {
   return (
     <section className="section-padding bg-gray-950">
-      <div className="container-max">
+      <div className="container-max mobile-padding">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -58,7 +58,7 @@ export default function QuickLinks() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {quickLinks.map((link, index) => (
             <motion.div
               key={link.title}
@@ -101,7 +101,7 @@ export default function QuickLinks() {
           viewport={{ once: true }}
           className="mt-16 bg-gradient-to-r from-primary-600 to-accent-600 rounded-3xl p-8 lg:p-12 text-white"
         >
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-2xl lg:text-3xl font-bold mb-4">
                 Visit Our Lab

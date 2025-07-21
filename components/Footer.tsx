@@ -35,14 +35,14 @@ const socialLinks = [
   { name: 'LinkedIn', href: '#', icon: Linkedin },
   { name: 'Twitter', href: '#', icon: Twitter },
   { name: 'GitHub', href: '#', icon: Github },
-  { name: 'Email', href: 'mailto:AI/ML-healthcare@jhu.edu', icon: Mail },
+  { name: 'Email', href: 'mailto:aiml-healthcare@jhu.edu', icon: Mail },
 ]
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container-max section-padding">
-        <div className="grid lg:grid-cols-4 gap-8 mb-12">
+      <div className="container-max section-padding mobile-padding">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Lab Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center text-gray-300">
                 <Mail className="h-4 w-4 mr-3 text-primary-400" />
-                <span className="text-sm">AI/ML-healthcare@jhu.edu</span>
+                <span className="text-sm">aiml-healthcare@jhu.edu</span>
               </div>
             </div>
           </motion.div>
@@ -198,7 +198,7 @@ export default function Footer() {
           
           <div className="mt-6 pt-6 border-t border-gray-800">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <div className="flex items-center space-x-6 text-sm text-gray-400">
+              <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm text-gray-400">
                 <Link href="#" className="hover:text-primary-400 transition-colors">
                   Privacy Policy
                 </Link>
