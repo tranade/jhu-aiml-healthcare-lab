@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @layer base {
@@ -21,18 +22,70 @@
 }
 
 @layer components {
+  /* Enhanced gradient text effects */
   .gradient-text {
     @apply bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent;
   }
   
+  .gradient-text-emerald {
+    @apply bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent;
+  }
+  
+  .gradient-text-violet {
+    @apply bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent;
+  }
+  
+  .gradient-text-rose {
+    @apply bg-gradient-to-r from-rose-400 to-pink-400 bg-clip-text text-transparent;
+  }
+  
+  .gradient-text-amber {
+    @apply bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent;
+  }
+  
+  /* Enhanced background gradients */
   .gradient-bg {
     @apply bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950;
   }
   
-  .card-hover {
-    @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 hover:shadow-primary-500/20;
+  .gradient-bg-emerald {
+    @apply bg-gradient-to-br from-emerald-950 via-emerald-900 to-teal-950;
   }
   
+  .gradient-bg-violet {
+    @apply bg-gradient-to-br from-violet-950 via-violet-900 to-indigo-950;
+  }
+  
+  .gradient-bg-rose {
+    @apply bg-gradient-to-br from-rose-950 via-rose-900 to-pink-950;
+  }
+  
+  .gradient-bg-amber {
+    @apply bg-gradient-to-br from-amber-950 via-amber-900 to-orange-950;
+  }
+  
+  /* Enhanced card effects with depth */
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-depth-4 hover:-translate-y-1 hover:shadow-primary-500/20;
+  }
+  
+  .card-hover-emerald {
+    @apply transition-all duration-300 hover:shadow-depth-4 hover:-translate-y-1 hover:shadow-emerald-500/20;
+  }
+  
+  .card-hover-violet {
+    @apply transition-all duration-300 hover:shadow-depth-4 hover:-translate-y-1 hover:shadow-violet-500/20;
+  }
+  
+  .card-hover-rose {
+    @apply transition-all duration-300 hover:shadow-depth-4 hover:-translate-y-1 hover:shadow-rose-500/20;
+  }
+  
+  .card-hover-amber {
+    @apply transition-all duration-300 hover:shadow-depth-4 hover:-translate-y-1 hover:shadow-amber-500/20;
+  }
+  
+  /* Layout utilities */
   .section-padding {
     @apply px-6 sm:px-8 lg:px-12 py-12 sm:py-16 lg:py-20;
   }
@@ -49,28 +102,171 @@
     text-wrap: balance;
   }
 
+  /* Enhanced glass effects with depth */
   .glass-effect {
-    @apply bg-gray-900/50 backdrop-blur-md border border-gray-800/50;
+    @apply bg-gray-900/50 backdrop-blur-md border border-gray-800/50 shadow-depth-1;
+  }
+  
+  .glass-effect-emerald {
+    @apply bg-emerald-900/30 backdrop-blur-md border border-emerald-800/50 shadow-depth-1 shadow-emerald-500/10;
+  }
+  
+  .glass-effect-violet {
+    @apply bg-violet-900/30 backdrop-blur-md border border-violet-800/50 shadow-depth-1 shadow-violet-500/10;
+  }
+  
+  .glass-effect-rose {
+    @apply bg-rose-900/30 backdrop-blur-md border border-rose-800/50 shadow-depth-1 shadow-rose-500/10;
+  }
+  
+  .glass-effect-amber {
+    @apply bg-amber-900/30 backdrop-blur-md border border-amber-800/50 shadow-depth-1 shadow-amber-500/10;
   }
 
+  /* Enhanced glow borders */
   .glow-border {
     @apply border border-primary-500/30 shadow-lg shadow-primary-500/10;
   }
+  
+  .glow-border-emerald {
+    @apply border border-emerald-500/30 shadow-lg shadow-emerald-500/10;
+  }
+  
+  .glow-border-violet {
+    @apply border border-violet-500/30 shadow-lg shadow-violet-500/10;
+  }
+  
+  .glow-border-rose {
+    @apply border border-rose-500/30 shadow-lg shadow-rose-500/10;
+  }
+  
+  .glow-border-amber {
+    @apply border border-amber-500/30 shadow-lg shadow-amber-500/10;
+  }
 
+  /* Enhanced dark cards with depth */
   .dark-card {
-    @apply bg-gray-900/80 backdrop-blur-sm border border-gray-800/50 rounded-2xl;
+    @apply bg-gray-900/80 backdrop-blur-sm border border-gray-800/50 rounded-2xl shadow-depth-2;
+  }
+  
+  .dark-card-emerald {
+    @apply bg-emerald-900/60 backdrop-blur-sm border border-emerald-800/50 rounded-2xl shadow-depth-2 shadow-emerald-500/5;
+  }
+  
+  .dark-card-violet {
+    @apply bg-violet-900/60 backdrop-blur-sm border border-violet-800/50 rounded-2xl shadow-depth-2 shadow-violet-500/5;
+  }
+  
+  .dark-card-rose {
+    @apply bg-rose-900/60 backdrop-blur-sm border border-rose-800/50 rounded-2xl shadow-depth-2 shadow-rose-500/5;
+  }
+  
+  .dark-card-amber {
+    @apply bg-amber-900/60 backdrop-blur-sm border border-amber-800/50 rounded-2xl shadow-depth-2 shadow-amber-500/5;
   }
 
+  /* Enhanced form elements */
   .dark-input {
-    @apply bg-gray-900 border-gray-800 text-gray-100 placeholder-gray-500 focus:border-primary-500 focus:ring-primary-500/20;
+    @apply bg-gray-900 border-gray-800 text-gray-100 placeholder-gray-500 focus:border-primary-500 focus:ring-primary-500/20 shadow-depth-1;
+  }
+  
+  .dark-input-emerald {
+    @apply bg-gray-900 border-gray-800 text-gray-100 placeholder-gray-500 focus:border-emerald-500 focus:ring-emerald-500/20 shadow-depth-1;
+  }
+  
+  .dark-input-violet {
+    @apply bg-gray-900 border-gray-800 text-gray-100 placeholder-gray-500 focus:border-violet-500 focus:ring-violet-500/20 shadow-depth-1;
+  }
+  
+  .dark-input-rose {
+    @apply bg-gray-900 border-gray-800 text-gray-100 placeholder-gray-500 focus:border-rose-500 focus:ring-rose-500/20 shadow-depth-1;
+  }
+  
+  .dark-input-amber {
+    @apply bg-gray-900 border-gray-800 text-gray-100 placeholder-gray-500 focus:border-amber-500 focus:ring-amber-500/20 shadow-depth-1;
   }
 
+  /* Enhanced button styles */
   .dark-button {
-    @apply bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-primary-500/25 transition-all duration-300 hover:scale-105;
+    @apply bg-gradient-to-r from-primary-600 to-accent-600 text-white font-semibold rounded-lg hover:shadow-depth-3 hover:shadow-primary-500/25 transition-all duration-300 hover:scale-105;
+  }
+  
+  .dark-button-emerald {
+    @apply bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:shadow-depth-3 hover:shadow-emerald-500/25 transition-all duration-300 hover:scale-105;
+  }
+  
+  .dark-button-violet {
+    @apply bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold rounded-lg hover:shadow-depth-3 hover:shadow-violet-500/25 transition-all duration-300 hover:scale-105;
+  }
+  
+  .dark-button-rose {
+    @apply bg-gradient-to-r from-rose-600 to-pink-600 text-white font-semibold rounded-lg hover:shadow-depth-3 hover:shadow-rose-500/25 transition-all duration-300 hover:scale-105;
+  }
+  
+  .dark-button-amber {
+    @apply bg-gradient-to-r from-amber-600 to-orange-600 text-white font-semibold rounded-lg hover:shadow-depth-3 hover:shadow-amber-500/25 transition-all duration-300 hover:scale-105;
   }
 
   .dark-button-secondary {
-    @apply border-2 border-gray-700 text-gray-300 font-semibold rounded-lg hover:border-primary-500 hover:text-primary-400 transition-all duration-300;
+    @apply border-2 border-gray-700 text-gray-300 font-semibold rounded-lg hover:border-primary-500 hover:text-primary-400 transition-all duration-300 shadow-depth-1;
+  }
+  
+  .dark-button-secondary-emerald {
+    @apply border-2 border-gray-700 text-gray-300 font-semibold rounded-lg hover:border-emerald-500 hover:text-emerald-400 transition-all duration-300 shadow-depth-1;
+  }
+  
+  .dark-button-secondary-violet {
+    @apply border-2 border-gray-700 text-gray-300 font-semibold rounded-lg hover:border-violet-500 hover:text-violet-400 transition-all duration-300 shadow-depth-1;
+  }
+  
+  .dark-button-secondary-rose {
+    @apply border-2 border-gray-700 text-gray-300 font-semibold rounded-lg hover:border-rose-500 hover:text-rose-400 transition-all duration-300 shadow-depth-1;
+  }
+  
+  .dark-button-secondary-amber {
+    @apply border-2 border-gray-700 text-gray-300 font-semibold rounded-lg hover:border-amber-500 hover:text-amber-400 transition-all duration-300 shadow-depth-1;
+  }
+  
+  /* New depth-based components */
+  .depth-layer-1 {
+    @apply shadow-depth-1 bg-gray-900/90 backdrop-blur-sm;
+  }
+  
+  .depth-layer-2 {
+    @apply shadow-depth-2 bg-gray-900/80 backdrop-blur-md;
+  }
+  
+  .depth-layer-3 {
+    @apply shadow-depth-3 bg-gray-900/70 backdrop-blur-lg;
+  }
+  
+  .depth-layer-4 {
+    @apply shadow-depth-4 bg-gray-900/60 backdrop-blur-xl;
+  }
+  
+  .depth-layer-5 {
+    @apply shadow-depth-5 bg-gray-900/50 backdrop-blur-2xl;
+  }
+  
+  /* Enhanced text effects */
+  .text-glow-primary {
+    text-shadow: 0 0 20px rgba(14, 165, 233, 0.5);
+  }
+  
+  .text-glow-emerald {
+    text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+  }
+  
+  .text-glow-violet {
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  }
+  
+  .text-glow-rose {
+    text-shadow: 0 0 20px rgba(244, 63, 94, 0.5);
+  }
+  
+  .text-glow-amber {
+    text-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
   }
 }
 
@@ -94,4 +290,22 @@
   .glow-text {
     text-shadow: 0 0 20px rgba(14, 165, 233, 0.5);
   }
+  
+  /* New depth utilities */
+  .depth-1 { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+  .depth-2 { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+  .depth-3 { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+  .depth-4 { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+  .depth-5 { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+  
+  /* Enhanced glow utilities */
+  .glow-primary { box-shadow: 0 0 20px rgba(14, 165, 233, 0.3); }
+  .glow-accent { box-shadow: 0 0 20px rgba(217, 70, 239, 0.3); }
+  .glow-emerald { box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
+  .glow-violet { box-shadow: 0 0 20px rgba(139, 92, 246, 0.3); }
+  .glow-rose { box-shadow: 0 0 20px rgba(244, 63, 94, 0.3); }
+  .glow-amber { box-shadow: 0 0 20px rgba(245, 158, 11, 0.3); }
+  
+  /* Backdrop blur utilities */
+  .backdrop-blur-xs { backdrop-filter: blur(2px); }
 } 

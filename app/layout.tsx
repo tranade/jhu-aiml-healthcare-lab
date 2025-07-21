@@ -1,8 +1,18 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Source_Sans_3, Playfair_Display } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const sourceSans = Source_Sans_3({ 
+  subsets: ['latin'],
+  weight: ['200', '300', '400', '500', '600', '700'],
+  variable: '--font-source-sans'
+})
+
+const playfair = Playfair_Display({ 
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-playfair'
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3000'),
@@ -52,7 +62,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${sourceSans.variable} ${playfair.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>
